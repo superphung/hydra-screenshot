@@ -22,6 +22,7 @@
   },
   "homepage": "https://github.com/superphung/hydra-screenshot#readme",
   "dependencies": {
+    "babel-runtime": "6.11.6",
     "nightmare": "2.7.0",
     "viewport-list": "5.0.1"
   },
