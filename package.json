@@ -1,6 +1,6 @@
 {
   "name": "hydra-screenshot",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "Nightmare wrapper to make its screenshot nicer to use",
   "main": "dist/index.js",
   "scripts": {
