@@ -18,6 +18,7 @@ const Hydra = require('hydra-screenshot');
 const hydra = new Hydra({delay: 2})
   .src('http://netflix.com', ['1280x1024', '1920x1080'], {localStorage: {token: '123'}})
   .src('http://google.com', ['iphone 5s', 'xiaomi mi-3'])
+  .dest(__dirname)
   .run()
   .then(() => console.log('done'));
 ```
@@ -58,3 +59,12 @@ Type: `object`
 Type: `object`
 
 Map of `key: value`
+
+### hydra.dest(path)
+
+#### path
+
+*required*
+Type: `string`
+
+Path for screenshots
