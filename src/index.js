@@ -39,15 +39,24 @@ class ScreenShotHydra {
     await this.nightmare.end()
   }
 
+  dest (path) {
+    this.path = path
+    return this
+  }
+
   _takeScreenshot (url, size) {
     const sizes = size.split('x')
     const names = url.split('/')
 
+    let name = names[names.length - 1] + sizes[0] + '-' + sizes[1] + '.png'
+    name = this.path
+      ? this.path + '/' + name
+      : name
     return this.nightmare
       .viewport(parseInt(sizes[0]), parseInt(sizes[1]))
       .goto(url)
       .wait(this.options.delay)
-      .screenshot(names[names.length - 1] + sizes[0] + '-' + sizes[1] + '.png')
+      .screenshot(name)
       .wait(300)
   }
 

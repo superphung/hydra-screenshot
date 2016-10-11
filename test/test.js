@@ -1,6 +1,6 @@
 import fs from 'fs'
 import test from 'ava'
-import Hydra from '../dist/index.js'
+import Hydra from '../dist/index'
 
 test('factory', t => {
   t.is(typeof Hydra, 'function')
@@ -12,7 +12,7 @@ test('src method', t => {
 })
 
 test('run method', async t => {
-  const hydra = new Hydra().src('http://google.com')
+  const hydra = new Hydra().src('http://google.com').dest(__dirname)
   await hydra.run()
   try {
     fs.accessSync('./google.com320-568.png')
