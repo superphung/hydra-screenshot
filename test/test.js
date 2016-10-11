@@ -15,7 +15,7 @@ test('run method', async t => {
   const hydra = new Hydra().src('http://google.com').dest(__dirname)
   await hydra.run()
   try {
-    fs.accessSync('./google.com320-568.png')
+    fs.accessSync('./google.com-320x568.png')
     t.pass()
   } catch (err) {
     t.fail()

@@ -48,7 +48,7 @@ class ScreenShotHydra {
     const sizes = size.split('x')
     const names = url.split('/')
 
-    let name = names[names.length - 1] + sizes[0] + '-' + sizes[1] + '.png'
+    let name = `${names[names.length - 1]}-${sizes[0]}x${sizes[1]}.png`
     name = this.path
       ? this.path + '/' + name
       : name
